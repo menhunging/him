@@ -1,0 +1,308 @@
+.job-details {
+  position: relative;
+  padding: 60px 0;
+  background-color: $colorWhite;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+  margin-top: -40px;
+  z-index: 3;
+  background-image: url("../img/../../img/job-details-bg.png");
+  background-image: image-set(
+    url("../img/job-details-bg.webp") type("image/webp"),
+    url("../img/job-details-bg.png") type("image/png")
+  );
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 1fr 342px;
+    align-items: start;
+    gap: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__card,
+  &__summary {
+    border: 1px solid $colorLightGray;
+    border-radius: 20px;
+    background-color: $colorWhite;
+  }
+
+  &__card {
+    padding: 32px;
+  }
+
+  &__content {
+    color: $colorBlue;
+
+    h3 {
+      margin-bottom: 14px;
+      color: $colorBlue;
+    }
+  }
+
+  &__about {
+    p {
+      color: $colorBlue;
+    }
+  }
+
+  &__section {
+    & + & {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid $colorLightGray;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: $colorBlue;
+    }
+
+    li {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: -12px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $colorBlue;
+      }
+    }
+  }
+
+  &__summary {
+    position: sticky;
+    top: 20px;
+    padding: 24px;
+
+    dl {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    dt {
+      margin-bottom: 3px;
+      color: $colorGray;
+    }
+
+    strong,
+    dd {
+      color: $colorBlue;
+      font-weight: 500;
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    strong {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+  }
+
+  &__respond {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__company {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 32px;
+    margin-top: 32px;
+    padding: 32px;
+    border-radius: 20px;
+    background-color: $colorBlueLight;
+    color: $colorBlue;
+  }
+
+  &__company-about {
+  }
+
+  &__company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 30px;
+    border-left: 1px solid $colorBlue;
+
+    dt {
+      color: $colorBlue;
+      opacity: 0.6;
+    }
+
+    dd,
+    a {
+      color: $colorBlue;
+      font-weight: 500;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.3s ease;
+
+      @include hover {
+        text-decoration-color: initial;
+      }
+    }
+  }
+
+  .job-catalog {
+    padding: 50px 0;
+    position: relative;
+    background-color: transparent;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  @include responsive1279 {
+    &__layout {
+      grid-template-columns: 1fr 290px;
+      gap: 20px;
+    }
+
+    &__card,
+    &__company,
+    &__summary {
+      padding: 20px;
+    }
+
+    &__summary {
+      padding: 20px;
+
+      dl {
+        gap: 16px;
+      }
+    }
+
+    &__content {
+      h3 {
+        margin-bottom: 12px;
+      }
+    }
+
+    &__company {
+      grid-template-columns: 60% 40%;
+      gap: 20px;
+    }
+  }
+
+  @include responsive1023 {
+    padding: 40px 0;
+
+    &__layout {
+      grid-template-columns: 1fr;
+    }
+
+    &__content {
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__summary {
+      dl {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px 0;
+        max-width: 500px;
+        width: 100%;
+
+        div {
+          width: calc(100% / 3);
+        }
+
+        div:first-child {
+          width: 100%;
+        }
+      }
+    }
+
+    .btn {
+      max-width: 235px;
+    }
+  }
+
+  @include responsive767 {
+    padding: 32px 0;
+
+    &__layout {
+    }
+
+    &__summary {
+      position: static;
+      order: -1;
+
+      dl {
+        div:last-child {
+          width: 100%;
+        }
+      }
+    }
+
+    &__company {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 20px;
+    }
+
+    &__company-info {
+      padding-top: 20px;
+      padding-left: 0;
+      border-top: 1px solid rgba(24, 59, 97, 0.25);
+      border-left: 0;
+      margin-top: 20px;
+    }
+
+    &__card,
+    &__summary,
+    &__company {
+      padding: 20px;
+    }
+
+    .job-catalog {
+      padding: 32px 0;
+    }
+  }
+
+  @include responsive389 {
+    &__summary {
+      dl {
+        div {
+          width: 100%;
+        }
+      }
+
+      strong {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}

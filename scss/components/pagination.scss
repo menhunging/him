@@ -1,0 +1,39 @@
+.pagination {
+  margin-top: 32px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  &-link {
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $colorText;
+    transition:
+      color 0.3s,
+      background-color 0.3s;
+
+    &.active {
+      background-color: $colorBlueLight;
+    }
+  }
+
+  a.pagination-link {
+    cursor: pointer;
+
+    @include hover {
+      background-color: $colorBlueLight;
+    }
+  }
+
+  @include responsive767 {
+    margin-top: 24px;
+  }
+}

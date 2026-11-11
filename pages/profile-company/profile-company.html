@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+
+    <title>Профиль компании</title>
+
+    <link rel="icon" type="image/png" href="../../img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Хим платформа" />
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/stylesheet.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="index-page">
+
+    <div class="site-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+
+                    <button class="header__burger"></button>
+
+                    <a class="header__logo" href="/">
+                        <img src="../../img/svg/logo.svg" alt="ХимПлатформа">
+                    </a>
+
+                    <nav class="header__nav">
+                        <a href="#">Главная</a>
+                        <a href="#">Кадры</a>
+                        <a href="#">Профориентация</a>
+                        <a href="#">Выпускник РХТУ</a>
+                        <a href="#">Рынок</a>
+                        <a href="#" class="proffessions">Сетевые программы</a>
+                        <a href="#">О нас</a>
+                    </nav>
+
+                    <div class="header__actions">
+                        <a class="header__profile btn btn--blueDark" href="#">Войти</a>
+                        <!-- это после авторизации будет кнопка -->
+                        <!-- <a class="header__lk btn btn--blueDark" href="#"></a> -->
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#">Вакансии</a>
+                        </li>
+                        <li>
+                            <a href="#">Вакансия: Инженер-технолог</a>
+                        </li>
+                        <li>
+                            <span>Профиль компании</span>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="breadcrumbs__mobile">Главная</a>
+                </div>
+            </div>
+
+            <div class="profile-page">
+                <div class="container">
+                    <h1 class="profile-page__title caption caption--h2">Профиль компании</h1>
+
+                    <div class="profile-page__layout">
+                        <div class="profile-sidebar">
+                            <div class="profile-sidebar__nav">
+                                <a class="profile-sidebar__link active" href="#">
+                                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                        <circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.5" />
+                                        <path d="M5.5 20c.5-4 2.7-6 6.5-6s6 2 6.5 6" stroke="currentColor"
+                                            stroke-width="1.5" stroke-linecap="round" />
+                                    </svg>
+                                    Мой профиль
+                                </a>
+                                <a class="profile-sidebar__link" href="#">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.6654 9.21826H7.66536M9.33203 12.5516H7.66536M14.332 5.88493H7.66536M17.6654 5.71826V14.3849C17.6654 15.7851 17.6654 16.4851 17.3929 17.0199C17.1532 17.4903 16.7707 17.8728 16.3003 18.1124C15.7656 18.3849 15.0655 18.3849 13.6654 18.3849H8.33203C6.9319 18.3849 6.23183 18.3849 5.69705 18.1124C5.22665 17.8728 4.8442 17.4903 4.60451 17.0199C4.33203 16.4851 4.33203 15.7851 4.33203 14.3849V5.71826C4.33203 4.31813 4.33203 3.61806 4.60451 3.08329C4.8442 2.61288 5.22665 2.23043 5.69705 1.99075C6.23183 1.71826 6.9319 1.71826 8.33203 1.71826H13.6654C15.0655 1.71826 15.7656 1.71826 16.3003 1.99075C16.7707 2.23043 17.1532 2.61288 17.3929 3.08329C17.6654 3.61806 17.6654 4.31813 17.6654 5.71826Z"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke="#2B2D30" />
+                                    </svg>
+                                    Резюме
+                                </a>
+                                <a class="profile-sidebar__link" href="#">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.4974 8.75L9.16406 10.4167L12.9141 6.66667M15.8307 17.5V6.5C15.8307 5.09987 15.8307 4.3998 15.5582 3.86502C15.3186 3.39462 14.9361 3.01217 14.4657 2.77248C13.9309 2.5 13.2309 2.5 11.8307 2.5H8.16406C6.76393 2.5 6.06387 2.5 5.52909 2.77248C5.05868 3.01217 4.67623 3.39462 4.43655 3.86502C4.16406 4.3998 4.16406 5.09987 4.16406 6.5V17.5L9.9974 14.1667L15.8307 17.5Z"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke="#2B2D30" />
+                                    </svg>
+                                    Мои отклики
+                                </a>
+                                <a class="profile-sidebar__link" href="#">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.6673 7.91675V5.66675C16.6673 4.26662 16.6673 3.56655 16.3948 3.03177C16.1552 2.56137 15.7727 2.17892 15.3023 1.93923C14.7675 1.66675 14.0674 1.66675 12.6673 1.66675H7.33398C5.93385 1.66675 5.23379 1.66675 4.69901 1.93923C4.2286 2.17892 3.84615 2.56137 3.60647 3.03177C3.33398 3.56655 3.33398 4.26662 3.33398 5.66675V14.3334C3.33398 15.7335 3.33398 16.4336 3.60647 16.9684C3.84615 17.4388 4.2286 17.8212 4.69901 18.0609C5.23379 18.3334 5.93385 18.3334 7.33398 18.3334H11.6673M11.6673 9.16675H6.66732M8.33398 12.5001H6.66732M13.334 5.83341H6.66732M13.7507 12.5019C13.8975 12.0845 14.1873 11.7326 14.5688 11.5084C14.9502 11.2842 15.3987 11.2023 15.8348 11.2771C16.2709 11.3519 16.6665 11.5786 16.9514 11.9171C17.2364 12.2556 17.3923 12.684 17.3917 13.1265C17.3917 14.3755 15.5181 15.0001 15.5181 15.0001M15.5422 17.5001H15.5506"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke="#2B2D30" />
+                                    </svg>
+                                    Инструкция
+                                </a>
+                            </div>
+                        </div>
+
+                        <section class="profile-company-info">
+                            <div class="company-card">
+                                <div class="company-card__main">
+                                    <div class="company-card__logo">
+                                        <picture>
+                                            <source type="image/webp" srcset="../../img/company-logo1.webp">
+                                            <img src="../../img/company-logo1.webp" alt="Логотип АО ХимПром">
+                                        </picture>
+                                    </div>
+
+                                    <div class="company-card__content">
+                                        <h2 class="caption caption--h3">АО “ХимПром”</h2>
+
+                                        <ul class="company-card__contacts">
+                                            <li>
+                                                <svg width="15" height="18" viewBox="0 0 15 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.76823 7.26676C9.76823 8.64748 8.64894 9.76676 7.26823 9.76676C5.88752 9.76676 4.76823 8.64748 4.76823 7.26676C4.76823 5.88605 5.88752 4.76676 7.26823 4.76676C8.64894 4.76676 9.76823 5.88605 9.76823 7.26676ZM13.9349 7.26676C13.9349 10.9487 10.6016 13.9334 7.26823 17.2668C3.9349 13.9334 0.601562 10.9487 0.601562 7.26676C0.601562 3.58487 3.58633 0.600098 7.26823 0.600098C10.9501 0.600098 13.9349 3.58487 13.9349 7.26676Z"
+                                                        stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke="#183B61" />
+                                                </svg>
+                                                Москва
+                                            </li>
+                                            <li>
+                                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M7.51569 9.19052C6.51438 8.1892 5.72372 7.057 5.14372 5.84899C5.09383 5.74508 5.06889 5.69312 5.04972 5.62738C4.98162 5.39375 5.03054 5.10687 5.17221 4.90901C5.21208 4.85333 5.25971 4.8057 5.35497 4.71044C5.64631 4.41911 5.79198 4.27344 5.88722 4.12696C6.24638 3.57455 6.24638 2.8624 5.88722 2.30999C5.79198 2.16351 5.64631 2.01784 5.35497 1.7265L5.19258 1.56411C4.74971 1.12124 4.52828 0.899803 4.29046 0.779516C3.81749 0.540291 3.25894 0.540291 2.78597 0.779517C2.54815 0.899804 2.32672 1.12124 1.88385 1.56411L1.75249 1.69547C1.31113 2.13682 1.09046 2.3575 0.921919 2.65752C0.734902 2.99045 0.600433 3.50752 0.60157 3.88937C0.602593 4.2335 0.669347 4.46868 0.802853 4.93905C1.52033 7.46688 2.87406 9.85218 4.86404 11.8422C6.85402 13.8322 9.23932 15.1859 11.7672 15.9034C12.2375 16.0369 12.4727 16.1036 12.8168 16.1046C13.1987 16.1058 13.7158 15.9713 14.0487 15.7843C14.3487 15.6158 14.5694 15.3951 15.0107 14.9537L15.1421 14.8224C15.585 14.3795 15.8064 14.1581 15.9267 13.9202C16.1659 13.4473 16.1659 12.8887 15.9267 12.4157C15.8064 12.1779 15.585 11.9565 15.1421 11.5136L14.9797 11.3512C14.6884 11.0599 14.5427 10.9142 14.3962 10.819C13.8438 10.4598 13.1317 10.4598 12.5793 10.819C12.4328 10.9142 12.2871 11.0599 11.9958 11.3512C11.9005 11.4465 11.8529 11.4941 11.7972 11.534C11.5993 11.6757 11.3125 11.7246 11.0788 11.6565C11.0131 11.6373 10.9611 11.6124 10.8572 11.5625C9.64921 10.9825 8.51701 10.1918 7.51569 9.19052Z"
+                                                        stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke="#183B61" />
+                                                </svg>
+                                                <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                                            </li>
+                                            <li>
+                                                <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M0.601562 3.1001L7.40566 7.86297C7.95664 8.24865 8.23213 8.44149 8.53178 8.51619C8.79647 8.58217 9.07332 8.58217 9.33801 8.51619C9.63767 8.44149 9.91315 8.24865 10.4641 7.86297L17.2682 3.1001M4.60156 13.9334H13.2682C14.6684 13.9334 15.3684 13.9334 15.9032 13.6609C16.3736 13.4213 16.7561 13.0388 16.9957 12.5684C17.2682 12.0336 17.2682 11.3336 17.2682 9.93343V4.6001C17.2682 3.19997 17.2682 2.4999 16.9957 1.96512C16.7561 1.49472 16.3736 1.11226 15.9032 0.872581C15.3684 0.600098 14.6684 0.600098 13.2682 0.600098H4.60156C3.20143 0.600098 2.50137 0.600098 1.96659 0.872581C1.49618 1.11226 1.11373 1.49472 0.874046 1.96512C0.601562 2.4999 0.601562 3.19997 0.601562 4.6001V9.93343C0.601562 11.3336 0.601562 12.0336 0.874046 12.5684C1.11373 13.0388 1.49618 13.4213 1.96659 13.6609C2.50137 13.9334 3.20143 13.9334 4.60156 13.9334Z"
+                                                        stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke="#183B61" />
+                                                </svg>
+                                                <a href="mailto:info@chimprom.ru">info@chimprom.ru</a>
+                                            </li>
+                                        </ul>
+
+                                        <p class="company-card__description">Крупнейший производитель химической
+                                            продукции в России. Мы создаем инновационные решения для устойчивого роста
+                                            химической промышленности.</p>
+                                    </div>
+                                </div>
+
+                                <div class="company-card__data">
+                                    <h3>Основная информация</h3>
+                                    <ul>
+                                        <li>
+                                            <span>ИНН</span>
+                                            <span>4401234567</span>
+                                        </li>
+                                        <li>
+                                            <span>Сайт компании</span>
+                                            <span><a href="https://www.chimprom.ru">https://www.chimprom.ru</a></span>
+                                        </li>
+                                        <li>
+                                            <span>Контактное лицо</span>
+                                            <span>Иванов Сергей Петрович, HR-директор</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="company-vacancies">
+                                <h2 class="company-vacancies__title caption caption--h3">Вакансии компании</h2>
+
+                                <div class="company-vacancies__list">
+                                    <article class="company-vacancy">
+                                        <div class="company-vacancy__logo">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./../../img/company-logo2.webp" />
+                                                    <img src="../../img/company-logo2.webp" alt="Логотип АО ХимПром">
+                                                </picture>
+                                            </div>
+
+                                        </div>
+                                        <div class="company-vacancy__content">
+                                            <h3>Менеджер-технолог</h3>
+                                            <span>АО “ХимПром”</span>
+                                            <span class="company-vacancy__location">
+                                                <svg width="15" height="18" viewBox="0 0 15 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.76823 7.26676C9.76823 8.64748 8.64894 9.76676 7.26823 9.76676C5.88752 9.76676 4.76823 8.64748 4.76823 7.26676C4.76823 5.88605 5.88752 4.76676 7.26823 4.76676C8.64894 4.76676 9.76823 5.88605 9.76823 7.26676ZM13.9349 7.26676C13.9349 10.9487 10.6016 13.9334 7.26823 17.2668C3.9349 13.9334 0.601562 10.9487 0.601562 7.26676C0.601562 3.58487 3.58633 0.600098 7.26823 0.600098C10.9501 0.600098 13.9349 3.58487 13.9349 7.26676Z"
+                                                        stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke="#9D9D9D" />
+                                                </svg>
+                                                Москва
+                                            </span>
+                                            <ul class="company-vacancy__meta">
+                                                <li>Полная занятость</li>
+                                                <li>Опыт до 1 года</li>
+                                            </ul>
+                                            <a class="company-vacancy__button btn btn--blueDark"
+                                                href="#">Откликнуться</a>
+                                        </div>
+                                    </article>
+
+                                    <article class="company-vacancy">
+                                        <div class="company-vacancy__logo">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./../../img/company-logo2.webp" />
+                                                    <img src="../../img/company-logo2.webp" alt="Логотип АО ХимПром">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="company-vacancy__content">
+                                            <h3>Ведущий инженер-технолог в хим. индустрии</h3>
+                                            <span>ООО “ХимПром”</span>
+                                            <span class="company-vacancy__location">
+                                                <svg width="15" height="18" viewBox="0 0 15 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.76823 7.26676C9.76823 8.64748 8.64894 9.76676 7.26823 9.76676C5.88752 9.76676 4.76823 8.64748 4.76823 7.26676C4.76823 5.88605 5.88752 4.76676 7.26823 4.76676C8.64894 4.76676 9.76823 5.88605 9.76823 7.26676ZM13.9349 7.26676C13.9349 10.9487 10.6016 13.9334 7.26823 17.2668C3.9349 13.9334 0.601562 10.9487 0.601562 7.26676C0.601562 3.58487 3.58633 0.600098 7.26823 0.600098C10.9501 0.600098 13.9349 3.58487 13.9349 7.26676Z"
+                                                        stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke="#9D9D9D" />
+                                                </svg>
+                                                Москва
+                                            </span>
+                                            <ul class="company-vacancy__meta">
+                                                <li>Полная занятость</li>
+                                                <li>Опыт до 1 года</li>
+                                            </ul>
+                                            <a class="company-vacancy__button btn btn--blueDark"
+                                                href="#">Откликнуться</a>
+                                        </div>
+                                    </article>
+
+                                    <article class="company-vacancy">
+                                        <div class="company-vacancy__logo">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./../../img/company-logo2.webp" />
+                                                    <img src="../../img/company-logo2.webp" alt="Логотип АО ХимПром">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="company-vacancy__content">
+                                            <h3>Оператор химического оборудования</h3>
+                                            <span>ООО “Профорганик”</span>
+                                            <span class="company-vacancy__location">
+                                                <svg width="15" height="18" viewBox="0 0 15 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.76823 7.26676C9.76823 8.64748 8.64894 9.76676 7.26823 9.76676C5.88752 9.76676 4.76823 8.64748 4.76823 7.26676C4.76823 5.88605 5.88752 4.76676 7.26823 4.76676C8.64894 4.76676 9.76823 5.88605 9.76823 7.26676ZM13.9349 7.26676C13.9349 10.9487 10.6016 13.9334 7.26823 17.2668C3.9349 13.9334 0.601562 10.9487 0.601562 7.26676C0.601562 3.58487 3.58633 0.600098 7.26823 0.600098C10.9501 0.600098 13.9349 3.58487 13.9349 7.26676Z"
+                                                        stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke="#9D9D9D" />
+                                                </svg>
+                                                Москва
+                                            </span>
+                                            <ul class="company-vacancy__meta">
+                                                <li>Полная занятость</li>
+                                                <li>Опыт до 1 года</li>
+                                            </ul>
+                                            <a class="company-vacancy__button btn btn--blueDark"
+                                                href="#">Откликнуться</a>
+                                        </div>
+                                    </article>
+
+                                    <article class="company-vacancy">
+                                        <div class="company-vacancy__logo">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./../../img/company-logo2.webp" />
+                                                    <img src="../../img/company-logo2.webp" alt="Логотип АО ХимПром">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="company-vacancy__content">
+                                            <h3>Инженер-технолог</h3>
+                                            <span>АО “ХимПром”</span>
+                                            <span class="company-vacancy__location">
+                                                <svg width="15" height="18" viewBox="0 0 15 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.76823 7.26676C9.76823 8.64748 8.64894 9.76676 7.26823 9.76676C5.88752 9.76676 4.76823 8.64748 4.76823 7.26676C4.76823 5.88605 5.88752 4.76676 7.26823 4.76676C8.64894 4.76676 9.76823 5.88605 9.76823 7.26676ZM13.9349 7.26676C13.9349 10.9487 10.6016 13.9334 7.26823 17.2668C3.9349 13.9334 0.601562 10.9487 0.601562 7.26676C0.601562 3.58487 3.58633 0.600098 7.26823 0.600098C10.9501 0.600098 13.9349 3.58487 13.9349 7.26676Z"
+                                                        stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke="#9D9D9D" />
+                                                </svg>
+                                                Москва
+                                            </span>
+                                            <ul class="company-vacancy__meta">
+                                                <li>Полная занятость</li>
+                                                <li>Опыт до 1 года</li>
+                                            </ul>
+                                            <a class="company-vacancy__button btn btn--blueDark"
+                                                href="#">Откликнуться</a>
+                                        </div>
+                                    </article>
+
+                                    <article class="company-vacancy">
+                                        <div class="company-vacancy__logo">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./../../img/company-logo2.webp" />
+                                                    <img src="../../img/company-logo2.webp" alt="Логотип АО ХимПром">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="company-vacancy__content">
+                                            <h3>Ведущий инженер-технолог в хим. индустрии</h3>
+                                            <span>ООО “ХимПром”</span>
+                                            <span class="company-vacancy__location">
+                                                <svg width="15" height="18" viewBox="0 0 15 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.76823 7.26676C9.76823 8.64748 8.64894 9.76676 7.26823 9.76676C5.88752 9.76676 4.76823 8.64748 4.76823 7.26676C4.76823 5.88605 5.88752 4.76676 7.26823 4.76676C8.64894 4.76676 9.76823 5.88605 9.76823 7.26676ZM13.9349 7.26676C13.9349 10.9487 10.6016 13.9334 7.26823 17.2668C3.9349 13.9334 0.601562 10.9487 0.601562 7.26676C0.601562 3.58487 3.58633 0.600098 7.26823 0.600098C10.9501 0.600098 13.9349 3.58487 13.9349 7.26676Z"
+                                                        stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke="#9D9D9D" />
+                                                </svg>
+                                                Москва
+                                            </span>
+                                            <ul class="company-vacancy__meta">
+                                                <li>Полная занятость</li>
+                                                <li>Опыт до 1 года</li>
+                                            </ul>
+                                            <a class="company-vacancy__button btn btn--blueDark"
+                                                href="#">Откликнуться</a>
+                                        </div>
+                                    </article>
+
+                                    <article class="company-vacancy">
+                                        <div class="company-vacancy__logo">
+                                            <div class="picture-block">
+                                                <picture>
+                                                    <source type="image/webp" srcset="./../../img/company-logo2.webp" />
+                                                    <img src="../../img/company-logo2.webp" alt="Логотип АО ХимПром">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="company-vacancy__content">
+                                            <h3>Оператор химического оборудования</h3>
+                                            <span>ООО “Профорганик”</span>
+                                            <span class="company-vacancy__location">
+                                                <svg width="15" height="18" viewBox="0 0 15 18" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M9.76823 7.26676C9.76823 8.64748 8.64894 9.76676 7.26823 9.76676C5.88752 9.76676 4.76823 8.64748 4.76823 7.26676C4.76823 5.88605 5.88752 4.76676 7.26823 4.76676C8.64894 4.76676 9.76823 5.88605 9.76823 7.26676ZM13.9349 7.26676C13.9349 10.9487 10.6016 13.9334 7.26823 17.2668C3.9349 13.9334 0.601562 10.9487 0.601562 7.26676C0.601562 3.58487 3.58633 0.600098 7.26823 0.600098C10.9501 0.600098 13.9349 3.58487 13.9349 7.26676Z"
+                                                        stroke-width="1.2" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke="#9D9D9D" />
+                                                </svg>
+                                                Москва
+                                            </span>
+                                            <ul class="company-vacancy__meta">
+                                                <li>Полная занятость</li>
+                                                <li>Опыт до 1 года</li>
+                                            </ul>
+                                            <a class="company-vacancy__button btn btn--blueDark"
+                                                href="#">Откликнуться</a>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <nav class="pagination">
+                                    <ul>
+                                        <li><a class="pagination-link active" href="#">1</a></li>
+                                        <li><a class="pagination-link" href="#">2</a></li>
+                                        <li><a class="pagination-link" href="#">3</a></li>
+                                        <li><a class="pagination-link" href="#">4</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__about">
+                        <a class="footer__logo" href="/">
+                            <img src="../../img/svg/logo-white.svg" alt="ХимПлатформа">
+                        </a>
+                    </div>
+
+                    <div class="footer__nav">
+                        <a href="#">О нас</a>
+                        <a href="#">Кадры</a>
+                        <a href="#">Профориентация</a>
+                        <a href="#">Рынок ХТК</a>
+                        <a href="#">Образовательные программы</a>
+                        <a href="#">Справочник профессий</a>
+                    </div>
+
+                    <div class="footer__contacts">
+                        <strong>Контакты</strong>
+                        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                        <strong>Почта:</strong>
+                        <a href="mailto:info@m-platforma.ru">info@m-platforma.ru</a>
+                    </div>
+
+                    <div class="footer__schedule">
+                        <strong>Режим работы</strong>
+                        <span>Пн - Пт: 09:00-18:00</span>
+                        <span>Сб - Вс: выходной</span>
+                        <a class="footer__button btn btn--white" href="#">Связаться с нами</a>
+                    </div>
+
+                    <p class="footer__copyright"><span class="thisYear">2026</span> Платформа для развития кадрового
+                        потенциала химической отрасли России</p>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="overlay"></div>
+
+</body>
+
+<script src="../../libs/jquery/jquery-4.0.0.min.js"></script>
+<script src="../../libs/swiper/swiper-bundle.min.js"></script>
+<script src="../../libs/select2/select2.min.js"></script>
+<script src="../../libs/micromodal/micromodal.min.js"></script>
+<script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
+<script src="../../libs/fancybox/fancybox.umd.js"></script>
+<script src="../../libs/aos/aos.js"></script>
+<script src="../../js/main.js"></script>
+
+</html>

@@ -1,0 +1,48 @@
+.blog-page {
+  padding: 0 0 80px;
+  color: $colorBlue;
+
+  &__title {
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  @include responsive1549 {
+    &__list {
+      gap: 16px;
+      margin-top: 16px;
+    }
+  }
+
+  @include responsive1279 {
+    padding-bottom: 60px;
+  }
+
+  @include responsive1023 {
+    padding-bottom: 40px;
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include responsive767 {
+    padding-bottom: 32px;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+  }
+
+  @include responsive389 {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

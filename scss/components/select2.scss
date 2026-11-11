@@ -1,0 +1,105 @@
+.form-item {
+  .select2-container {
+    width: 100% !important;
+    font-family: $fontMain;
+
+    .select2-selection--single {
+      height: 38px;
+      border: 1px solid $colorLightGray;
+      border-radius: 8px;
+      background-color: $colorWhite;
+      transition: border-color 0.3s;
+    }
+
+    .select2-selection__rendered {
+      height: 36px;
+      padding: 0 38px 0 12px;
+      color: $colorText;
+      font-size: 16px;
+      line-height: 36px;
+    }
+
+    .select2-selection__arrow {
+      width: 38px;
+      height: 36px;
+      top: 1px;
+      right: 0;
+      position: absolute;
+
+      b {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 12px;
+        height: 7px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L6 6L11 1' stroke='%239D9D9D' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+        transition: transform 0.3s;
+      }
+    }
+
+    &.select2-container--open {
+      .select2-selection--single {
+        border-color: $colorBlueDark;
+      }
+
+      .select2-selection__arrow::before {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+  }
+}
+
+.select2-container {
+  &.select2-container--default.select2-container--open {
+    &.select2-container--below,
+    &.select2-container--above {
+      .select2-selection--single,
+      .select2-selection--multiple {
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .select2-dropdown {
+    width: max-content !important;
+    max-width: calc(100vw - 32px);
+    margin-top: 4px;
+    border: 0;
+    border-radius: 12px;
+    background-color: $colorWhite;
+    box-shadow: 0 4px 14px rgba(33, 72, 99, 0.14);
+    overflow: hidden;
+  }
+
+  .select2-results__options {
+    padding: 8px 0;
+  }
+
+  .select2-results__option {
+    min-height: 34px;
+    padding: 7px 20px;
+    color: $colorGray;
+    font-family: $fontMain;
+    font-size: 16px;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+
+  .select2-results__option--selected {
+    background-color: transparent;
+    color: $colorBlue;
+  }
+
+  .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: transparent;
+    color: $colorBlue;
+  }
+}

@@ -1,0 +1,271 @@
+.job-hero {
+  position: relative;
+  min-height: 415px;
+  padding: 0;
+  overflow: hidden;
+  color: $colorWhite;
+  display: flex;
+  flex-direction: column;
+
+  &__background {
+    position: absolute;
+    inset: 0;
+
+    picture,
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(3, 35, 63, 0.7) 0%,
+        rgba(3, 35, 63, 0.08) 100%
+      );
+    }
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+  }
+
+  &__subtitle {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &__search {
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+    margin-top: 40px;
+    padding: 0 24px;
+    border-radius: 20px;
+    background-color: $colorWhite;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__field {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: $colorGray;
+    padding: 0;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      flex: 0 0 14px;
+    }
+
+    input {
+      width: 100%;
+      height: 60px;
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      color: $colorText;
+      font-size: 16px;
+      line-height: 22px;
+
+      &::placeholder {
+        color: $colorGray;
+      }
+    }
+  }
+
+  &__submit {
+    height: 40px;
+    min-height: 40px;
+    width: auto;
+  }
+
+  &:not(.job-hero--vacancy) {
+    .breadcrumbs {
+      color: $colorWhite;
+      margin-bottom: 20px;
+
+      span {
+        color: $colorWhite;
+      }
+
+      ul li:before {
+        color: $colorWhite;
+      }
+
+      .breadcrumbs__mobile::before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='5' height='9' viewBox='0 0 5 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4 8.5L0.5 4.5L4 0.5' stroke-linecap='round' stroke-linejoin='round' stroke='white'/%3e%3c/svg%3e ");
+      }
+    }
+  }
+
+  @include responsive1549 {
+    min-height: 315px;
+
+    &__subtitle {
+      margin-top: 20px;
+    }
+
+    &__search {
+      height: 56px;
+      margin-top: 16px;
+    }
+
+    &__field {
+      input {
+        height: 56px;
+      }
+    }
+
+    .breadcrumbs {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include responsive1279 {
+    min-height: 320px;
+
+    &__subtitle {
+    }
+
+    &__search {
+      height: 52px;
+    }
+
+    &__field {
+      input {
+        height: 52px;
+      }
+    }
+
+    .breadcrumbs {
+      margin-bottom: 4px;
+    }
+  }
+
+  @include responsive1023 {
+    min-height: 280px;
+
+    &__subtitle {
+      margin-top: 12px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__search {
+      height: 50px;
+    }
+
+    &__field {
+      input {
+        height: 50px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  @include responsive767 {
+    min-height: 280px;
+
+    &__subtitle {
+      max-width: 320px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__search {
+      padding: 0 10px;
+    }
+
+    &__field {
+      padding: 0 10px;
+      gap: 10px;
+
+      input {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    &__submit {
+    }
+  }
+
+  @include responsive389 {
+    min-height: 300px;
+  }
+}
+
+.job-hero__vacancy {
+  color: $colorBlue;
+  margin-top: 45px;
+
+  @include before {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      $colorBlueLight 50%,
+      rgba($colorBlueLight, 0) 100%
+    );
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .job-hero__title {
+    position: relative;
+    z-index: 2;
+  }
+
+  .job-hero__subtitle {
+    font-size: 24px;
+    line-height: 26px;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+  }
+
+  .company-vacancy__meta {
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
+
+    li + li {
+      &::before {
+        background-color: $colorBlueDark;
+      }
+    }
+  }
+
+  @include responsive1549 {
+    margin-top: 0;
+  }
+
+  @include responsive1279 {
+    margin-top: 30px;
+  }
+
+  @include responsive1023 {
+    margin-top: 20px;
+  }
+}

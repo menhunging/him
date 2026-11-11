@@ -1,0 +1,169 @@
+.header {
+  position: relative;
+  z-index: 8;
+  box-shadow: 0 3px 9px rgba(33, 72, 99, 0.08);
+  color: $colorText;
+  padding: 15px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    width: 173px;
+    height: 40px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+    line-height: 18px;
+
+    a {
+      white-space: nowrap;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.3s;
+
+      &.proffessions {
+        color: $colorAzure;
+      }
+
+      @include hover {
+        text-decoration-color: initial;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__resume {
+    white-space: nowrap;
+  }
+
+  &__profile {
+    white-space: nowrap;
+  }
+
+  &__lk {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M17 19C17 17.6044 17 16.9067 16.8278 16.3389C16.44 15.0605 15.4395 14.06 14.1611 13.6722C13.5933 13.5 12.8956 13.5 11.5 13.5H6.5C5.10444 13.5 4.40665 13.5 3.83886 13.6722C2.56045 14.06 1.56004 15.0605 1.17224 16.3389C1 16.9067 1 17.6044 1 19M13.5 5.5C13.5 7.98528 11.4853 10 9 10C6.51472 10 4.5 7.98528 4.5 5.5C4.5 3.01472 6.51472 1 9 1C11.4853 1 13.5 3.01472 13.5 5.5Z' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' stroke='white'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 56px;
+    min-height: 40px;
+  }
+
+  &__burger {
+    display: none;
+    cursor: pointer;
+    width: 22px;
+    height: 15px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='17' viewBox='0 0 25 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 8.5H23.5M1 1H23.5M1 16H16' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' stroke='%2317416D'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0s;
+
+    &.opened {
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIyIDIyIiBmaWxsPSJub25lIj48cGF0aCBkPSJNMyAzTDE5IDE5TTE5IDNMMyAxOSIgc3Ryb2tlPSIjMTc0MTZEIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==");
+    }
+
+    // @include hover {
+    //   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='17' viewBox='0 0 25 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 8.5H23.5M1 1H23.5M1 16H16' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' stroke='%23fff'/%3e%3c/svg%3e ");
+    // }
+  }
+
+  @include responsive1549 {
+    &__logo {
+      width: 95px;
+      height: 22px;
+    }
+
+    &__nav {
+      font-size: 12px;
+      line-height: 18px;
+      gap: 16px;
+    }
+
+    &__actions {
+      gap: 6px;
+    }
+  }
+
+  @include responsive1279 {
+    padding: 11px 0;
+
+    &__logo {
+      width: 197px;
+      height: 48px;
+      transform: translateX(90px);
+    }
+
+    &__nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $colorWhite;
+      display: none;
+      z-index: 8;
+      padding: 16px;
+      box-shadow: 0px 10px 12px 0px #0448902e;
+      font-size: 14px;
+      line-height: 18px;
+
+      &.opened {
+        display: block;
+      }
+
+      a {
+        display: block;
+
+        & + a {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &__burger {
+      display: flex;
+    }
+  }
+
+  @include responsive1023 {
+    padding: 7px 0;
+
+    &__logo {
+      width: 175px;
+      height: 42px;
+    }
+  }
+
+  @include responsive767 {
+    &__logo {
+      width: 119px;
+      height: 28px;
+      transform: translateX(25px);
+    }
+
+    &__resume {
+      display: none;
+    }
+  }
+
+  @include responsive389 {
+    &__logo {
+      transform: translateX(5px);
+    }
+  }
+}

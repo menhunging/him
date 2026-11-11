@@ -1,0 +1,172 @@
+.modal {
+  font-family: $fontMain;
+  display: none;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: $colorBlack;
+}
+
+.modal.is-open {
+  display: flex;
+  position: fixed;
+  z-index: 20;
+}
+
+.modal__container {
+  overflow: auto;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  padding: 50px 0;
+  max-width: 1050px;
+  position: relative;
+  margin: auto;
+
+  @include responsive1279 {
+    max-width: 730px;
+  }
+
+  @include responsive767 {
+    max-width: calc(100% - 20px);
+  }
+}
+
+.modal__content {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.modal__inner {
+  position: relative;
+}
+
+.modal__close {
+  cursor: pointer;
+  top: 45px;
+  right: 40px;
+  width: 24px;
+  height: 24px;
+  background-size: 14px;
+  display: flex;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.75 0.75L7.75 7.75M7.75 7.75L0.75 14.75M7.75 7.75L0.75 0.75M7.75 7.75L14.75 14.75' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' stroke='%231A1A1A'/%3e%3c/svg%3e ");
+  position: absolute;
+  z-index: 3;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  @include responsive1279 {
+    top: 43px;
+  }
+
+  @include responsive767 {
+    top: 19px;
+    right: 10px;
+  }
+}
+
+.modal__content {
+  border-radius: 9px;
+
+  .scroll {
+    &::-webkit-scrollbar {
+      width: 5px;
+      border-radius: 10px;
+      margin-right: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #d9d9d9;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $colorBlack;
+      border-radius: 10px;
+    }
+  }
+}
+
+.modal__overlay {
+  background-color: #edeadf;
+  transition: all 0.3s;
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: inherit;
+}
+
+// .popup-send {
+//   .partners {
+//     padding: 0;
+//   }
+// }
+
+// #popup-guarant {
+//   .modal__container {
+//     max-width: 624px;
+
+//     @include responsive1549 {
+//       max-width: 800px;
+//     }
+
+//     @include responsive1279 {
+//       max-width: 95%;
+//     }
+//   }
+
+//   .modal__close {
+//     width: 36px;
+//     height: 36px;
+//     background-size: 26px;
+//     right: 5px;
+//     top: 5px;
+
+//     @include responsive1279 {
+//     }
+//   }
+// }
+
+// .popup-guarant {
+//   background-color: $colorWhite;
+//   padding: 32px;
+//   display: flex;
+//   flex-direction: column;
+//   border-radius: 24px;
+//   overflow: hidden;
+//   gap: 40px;
+
+//   @include responsive1549 {
+//     padding: 24px;
+//     gap: 20px;
+//   }
+
+//   @include responsive1279 {
+//     padding: 16px;
+//     gap: 16px;
+//   }
+
+//   @include responsive767 {
+//     font-size: 12px;
+//   }
+
+//   .caption {
+//     font-family: $fontRadiotechnika;
+//     font-weight: 400;
+//   }
+
+//   .picture-block {
+//     width: 100%;
+//     height: 200px;
+//     background-color: rgba(183, 170, 154, 0.2);
+//     border-radius: 8px;
+//   }
+// }

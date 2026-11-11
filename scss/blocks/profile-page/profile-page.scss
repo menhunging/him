@@ -1,0 +1,48 @@
+.profile-page {
+  padding-bottom: 80px;
+
+  &__title {
+    color: $colorBlue;
+  }
+
+  &__layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  @include responsive1549 {
+    padding-bottom: 60px;
+
+    &__layout {
+      grid-template-columns: 170px 1fr;
+      gap: 20px;
+    }
+  }
+
+  @include responsive1279 {
+    padding-bottom: 40px;
+
+    &__layout {
+      gap: 16px;
+    }
+  }
+
+  @include responsive1023 {
+    &__layout {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  @include responsive767 {
+    padding-bottom: 32px;
+
+    &__title {
+    }
+
+    &__layout {
+    }
+  }
+}

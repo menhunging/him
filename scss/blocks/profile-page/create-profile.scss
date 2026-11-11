@@ -1,0 +1,184 @@
+.create-profile {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid $colorLightGray;
+  border-radius: 16px;
+
+  .caption {
+    color: $colorBlue;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 38px;
+    align-items: start;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__subtitle,
+  &__instruction h3 {
+    color: $colorBlue;
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  &__submit {
+    margin-top: 16px;
+    width: auto;
+  }
+
+  &__upload {
+    min-height: 304px;
+    padding: 24px;
+    border: 1px solid $colorLightGray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $colorText;
+    cursor: pointer;
+
+    .caption {
+      text-align: left;
+      color: $colorBlue;
+      display: block;
+      width: 100%;
+    }
+
+    input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    small {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 22px;
+      color: $colorText;
+    }
+
+    span {
+    }
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__dropzone {
+    width: 100%;
+    height: 184px;
+    margin-top: 16px;
+    border: 1px solid $colorLightGray;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #c4c4c4;
+    font-size: 12px;
+    line-height: 16px;
+    transition:
+      border-color 0.3s,
+      background-color 0.3s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include hover {
+      border-color: $colorBlueDark;
+      background-color: $colorBlueLight;
+    }
+  }
+
+  @include responsive1279 {
+    padding: 20px;
+
+    &__form {
+      grid-template-columns: 1fr 222px;
+      gap: 24px;
+    }
+
+    &__upload {
+      padding: 20px;
+      min-height: 258px;
+    }
+
+    &__dropzone {
+      height: 146px;
+    }
+  }
+
+  @include responsive1023 {
+    padding: 16px;
+
+    &__form {
+      grid-template-columns: 1fr 168px;
+    }
+
+    &__fields {
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    &__dropzone {
+      height: 115px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &__upload {
+      padding: 12px;
+      min-height: initial;
+
+      small {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  @include responsive767 {
+    margin-top: 20px;
+    padding: 16px;
+
+    &__form {
+      grid-template-columns: 1fr;
+    }
+
+    &__upload {
+      grid-row: 1;
+      border: 0;
+      padding: 0;
+    }
+
+    &__dropzone {
+      height: 260px;
+    }
+  }
+
+  @include responsive479 {
+    &__dropzone {
+      height: 204px;
+    }
+  }
+}

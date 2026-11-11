@@ -1,0 +1,260 @@
+.home-hero {
+  position: relative;
+  min-height: 620px;
+  padding: 0;
+  overflow: hidden;
+  background-color: $colorBlue;
+  color: $colorWhite;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      90deg,
+      rgba(6, 42, 75, 0.98) 0%,
+      rgba(6, 42, 75, 0.9) 34%,
+      rgba(6, 42, 75, 0.42) 58%,
+      rgba(6, 42, 75, 0.08) 100%
+    );
+  }
+
+  &__background {
+    position: absolute;
+    inset: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 75px 0 100px;
+  }
+
+  &__title {
+    max-width: 750px;
+
+    span {
+      color: $colorAzure;
+    }
+  }
+
+  &__description {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 710px;
+  }
+
+  &__statistics {
+    margin-top: auto;
+  }
+
+  &__statistics-title {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+
+  &__statistics-list {
+    display: flex;
+    align-items: flex-end;
+    gap: 26px;
+  }
+
+  &__statistics-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    strong {
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 56px;
+      white-space: nowrap;
+    }
+
+    span {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  @include responsive1549 {
+    min-height: 500px;
+
+    &__description {
+      margin-top: 20px;
+    }
+
+    &__content {
+      padding: 42px 0 80px;
+    }
+  }
+
+  @include responsive1279 {
+    min-height: 405px;
+
+    &__content {
+      padding: 38px 0 70px;
+    }
+
+    &__title {
+      max-width: 590px;
+    }
+
+    &__description {
+      font-size: 18px;
+      line-height: 24px;
+      max-width: 490px;
+    }
+
+    &__statistics-title {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+
+    &__statistics-item {
+      gap: 10px;
+
+      strong {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      span {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  @include responsive1023 {
+    min-height: 340px;
+
+    &__title {
+      max-width: 340px;
+    }
+
+    &__description {
+      margin-top: 16px;
+    }
+
+    &__statistics-title {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+
+    &__statistics-item {
+      gap: 6px;
+
+      strong {
+        font-size: 22px;
+        line-height: 28px;
+      }
+
+      span {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  @include responsive767 {
+    min-height: 500px;
+
+    &::before {
+      background: linear-gradient(
+        180deg,
+        rgba(6, 42, 75, 1) 0%,
+        rgb(6, 42, 75) 46%,
+        rgba(6, 42, 75, 0.48) 100%
+      );
+      z-index: 2;
+    }
+
+    &__background {
+      img {
+        object-position: center bottom;
+        object-fit: contain;
+        z-index: 1;
+      }
+    }
+
+    &__content {
+      padding: 32px 0 40px;
+    }
+
+    &__title {
+    }
+
+    &__description {
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__statistics {
+      margin-top: 20px;
+    }
+
+    &__statistics-list {
+      gap: 30px;
+    }
+
+    &__statistics-item {
+      gap: 6px;
+
+      strong {
+        font-size: 22px;
+        line-height: 28px;
+      }
+
+      span {
+      }
+    }
+  }
+
+  @include responsive389 {
+    &::before {
+      background: linear-gradient(
+        180deg,
+        rgba(6, 42, 75, 1) 0%,
+        rgb(6, 42, 75) 60%,
+        rgba(6, 42, 75, 0.48) 100%
+      );
+      z-index: 2;
+    }
+
+    &__statistics-list {
+      gap: 16px;
+    }
+
+    &__statistics-item {
+      strong {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+}

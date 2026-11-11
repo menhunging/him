@@ -1,0 +1,26 @@
+.create-resume {
+  &__about {
+    margin-top: 16px;
+
+    textarea {
+      height: 147px;
+    }
+  }
+
+  &__education {
+    width: 100%;
+    margin-top: 24px;
+
+    .caption {
+      color: $colorBlue;
+    }
+  }
+
+  @include responsive767 {
+    &__about {
+      textarea {
+        height: 182px;
+      }
+    }
+  }
+}

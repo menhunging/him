@@ -1,0 +1,51 @@
+@import "./shared/values";
+@import "./shared/mixins";
+@import "./shared/reset";
+
+@import "base";
+
+// components
+@import "./components/btns";
+@import "./components/captions";
+@import "./components/modals";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/breadcrumbs";
+@import "./components/pagination";
+@import "./components/select2";
+
+// popups
+@import "./popups/popup-login";
+
+// HOME PAGE
+@import "blocks/home-page/grettings-main.scss";
+@import "blocks/home-page/home-hero.scss";
+@import "blocks/home-page/home-platform.scss";
+@import "blocks/home-page/home-about.scss";
+@import "blocks/home-page/home-partners.scss";
+@import "blocks/home-page/home-steps.scss";
+@import "blocks/home-page/home-potential.scss";
+@import "blocks/home-page/home-news.scss";
+
+// PROFILE PAGE
+@import "blocks/profile-page/profile-page.scss";
+@import "blocks/profile-page/profile-sidebar.scss";
+@import "blocks/profile-page/profile-card.scss";
+@import "blocks/profile-page/create-profile.scss";
+@import "blocks/profile-page/create-company-profile.scss";
+@import "blocks/profile-page/profile-company.scss";
+
+// RESUME PAGE
+@import "blocks/resume-page/resume-page.scss";
+@import "blocks/resume-page/create-resume.scss";
+
+// BLOG PAGE
+@import "blocks/blog-page/blog-page.scss";
+
+// JOB PAGE
+@import "blocks/job-page/job-hero.scss";
+@import "blocks/job-page/job-details.scss";
+@import "blocks/job-page/job-catalog.scss";
+
+// BLOCKS
+@import "blocks";

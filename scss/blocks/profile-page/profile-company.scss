@@ -1,0 +1,309 @@
+.profile-company-info {
+  padding: 0;
+}
+
+.company-card {
+  padding: 24px;
+  border: 1px solid $colorLightGray;
+  border-radius: 14px;
+
+  &__main {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__logo {
+    width: 200px;
+    height: 200px;
+    flex: 0 0 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    .picture-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    picture,
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    color: $colorBlue;
+
+    .caption {
+      color: $colorBlue;
+    }
+  }
+
+  &__contacts {
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 22px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      & + li {
+        margin-top: 16px;
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+    }
+
+    a {
+      @include text-decoration-hover($colorBlue);
+    }
+  }
+
+  &__description {
+    max-width: 720px;
+    margin-top: 20px;
+    color: $colorGray;
+  }
+
+  &__data {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid $colorLightGray;
+
+    h3 {
+      color: $colorBlue;
+    }
+
+    ul {
+      margin: 14px 0 0;
+    }
+
+    li {
+      color: $colorGray;
+
+      & + li {
+        margin-top: 16px;
+      }
+
+      span {
+        &:last-child {
+          color: $colorBlue;
+          margin-left: 12px;
+        }
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      transition: text-decoration-color 0.3s;
+      text-underline-offset: 2px;
+
+      @include hover {
+        text-decoration-color: transparent;
+      }
+    }
+  }
+
+  @include responsive1279 {
+    padding: 16px;
+
+    &__main {
+      gap: 16px;
+    }
+
+    &__logo {
+      width: 120px;
+      height: 120px;
+      flex-basis: 120px;
+    }
+
+    &__contacts {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 18px;
+
+      li + li {
+        margin-top: 10px;
+      }
+    }
+
+    &__description {
+      margin-top: 24px;
+    }
+  }
+
+  @include responsive767 {
+    &__main {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &__logo {
+      width: 100%;
+      height: auto;
+      flex-basis: inherit;
+      margin: 0;
+      aspect-ratio: 1 / 1;
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__data {
+      li {
+        color: $colorGray;
+
+        span {
+          &:last-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.company-vacancies {
+  margin-top: 32px;
+
+  &__title {
+    color: $colorBlue;
+  }
+
+  &__list {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @include responsive1279 {
+    margin-top: 24px;
+
+    &__list {
+      gap: 12px;
+    }
+  }
+}
+
+.company-vacancy {
+  padding: 24px;
+  border: 1px solid $colorLightGray;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+
+  &__logo {
+    width: 130px;
+    height: 130px;
+    flex: 0 0 130px;
+    position: relative;
+
+    .picture-block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    picture,
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $colorGray;
+    gap: 12px;
+
+    h3 {
+      color: $colorBlue;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    li + li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &::before {
+        content: "";
+        width: 3px;
+        height: 3px;
+        flex: 0 0 3px;
+        border-radius: 50%;
+        background-color: $colorGray;
+      }
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__button {
+    width: auto;
+  }
+
+  @include responsive1279 {
+    padding: 20px;
+    gap: 16px;
+
+    &__logo {
+      width: 92px;
+      height: 92px;
+      flex-basis: 92px;
+    }
+
+    &__content {
+      gap: 6px;
+    }
+  }
+
+  @include responsive479 {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

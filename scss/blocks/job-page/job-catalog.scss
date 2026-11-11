@@ -1,0 +1,158 @@
+.job-catalog {
+  padding: 60px 0;
+  background-color: $colorWhite;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+
+  &__layout {
+    margin-top: 40px;
+  }
+
+  @include responsive1549 {
+  }
+
+  @include responsive1279 {
+    padding: 40px 0;
+  }
+
+  @include responsive767 {
+    padding: 32px 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    &__layout {
+      margin-top: 30px;
+    }
+  }
+}
+
+.job-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  &__item {
+    width: auto;
+
+    .select2-container {
+      width: 100% !important;
+
+      .select2-selection--single {
+        height: 40px;
+        border: 0;
+        border-radius: 12px;
+        background-color: $colorWhite;
+        box-shadow: 0 4px 14px rgba(33, 72, 99, 0.14);
+      }
+
+      .select2-selection__rendered {
+        height: 40px;
+        padding: 0 34px 0 16px;
+        color: $colorGray;
+        font-family: $fontMain;
+        font-size: 14px;
+        line-height: 40px;
+      }
+
+      .select2-results__option {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .select2-selection__arrow {
+        width: 34px;
+        height: 38px;
+        top: 1px;
+        right: 0;
+
+        b {
+          display: none;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 10px;
+          height: 6px;
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 5L9 1' stroke='%239D9D9D' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+          background-position: center;
+          background-repeat: no-repeat;
+          transform: translate(-50%, -50%);
+          transition: transform 0.3s;
+        }
+      }
+
+      &.select2-container--open {
+        &.select2-container--below,
+        &.select2-container--above {
+          .select2-selection--single {
+            border-radius: 12px;
+          }
+        }
+
+        .select2-selection__arrow::before {
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__reset {
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 12px;
+    background-color: $colorWhite;
+    box-shadow: 0px 4px 12px 0px #0448902e;
+    color: $colorBlue;
+    font-size: 14px;
+    line-height: 18px;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+
+    @include hover {
+      background-color: $colorBlueDark;
+      color: $colorWhite;
+    }
+  }
+
+  @include responsive1279 {
+    gap: 8px;
+  }
+
+  @include responsive767 {
+  }
+}
+
+.job-results {
+  &__title {
+    color: $colorBlue;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &__list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  @include responsive1279 {
+    &__title {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    &__list {
+      gap: 12px;
+      margin-top: 24px;
+    }
+  }
+}

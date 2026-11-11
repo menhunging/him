@@ -1,0 +1,144 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  position: relative;
+  color: $colorBlack;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 11px 16px;
+  border-radius: 12px;
+  font-variant-ligatures: none;
+  font-family: $fontMain;
+  width: 100%;
+  height: 40px;
+
+  @include responsive1549 {
+  }
+
+  @include responsive1279 {
+  }
+
+  @include responsive1023 {
+  }
+
+  @include responsive767 {
+  }
+
+  &--white {
+    background-color: $colorWhite;
+    color: $colorBlueDark;
+
+    @include hover {
+      background-color: $colorBlueDarkHover;
+      color: $colorWhite;
+    }
+  }
+
+  &--gray {
+    background-color: $colorLightGray;
+    color: $colorText;
+
+    @include hover {
+      background-color: $colorBlueDarkHover;
+      color: $colorWhite;
+    }
+  }
+
+  &--blueDark {
+    background-color: $colorBlueDark;
+    color: $colorWhite;
+
+    @include hover {
+      background-color: $colorBlueDarkHover;
+    }
+  }
+
+  &--blueDarkBorder {
+    border-color: $colorBlue;
+    background-color: $colorWhite;
+    color: $colorBlue;
+
+    @include hover {
+      border-color: $colorBlueDarkHover;
+      background-color: $colorBlueDarkHover;
+      color: $colorWhite;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: $colorGray;
+    color: $colorWhite;
+    pointer-events: none;
+  }
+}
+
+.btn-edit {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M16.5 8.82843L12.5 4.82843M1 20.3284L4.38437 19.9524C4.79786 19.9064 5.0046 19.8835 5.19785 19.8209C5.36929 19.7654 5.53245 19.687 5.68289 19.5878C5.85245 19.476 5.99955 19.3289 6.29373 19.0347L19.5 5.82843C20.6046 4.72386 20.6046 2.933 19.5 1.82843C18.3955 0.723859 16.6046 0.723857 15.5 1.82843L2.29373 15.0347C1.99955 15.3289 1.85246 15.476 1.74064 15.6455C1.64143 15.796 1.56301 15.9591 1.50751 16.1306C1.44496 16.3238 1.42198 16.5306 1.37604 16.9441L1 20.3284Z' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' stroke='%23183B61'/%3e%3c/svg%3e ");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  padding-left: 36px;
+  color: $colorBlue;
+  text-underline-offset: 2px;
+  border-radius: 0;
+
+  @include hover {
+    text-decoration-color: transparent;
+  }
+
+  @include responsive767 {
+    width: 24px;
+    height: 24px;
+    color: transparent;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+
+.btn-file {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: underline;
+  gap: 12px;
+  color: $colorBlue;
+  text-underline-offset: 2px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  transition: text-decoration 0.3s;
+
+  @include before {
+    position: relative;
+    background-color: $colorBlueLight;
+    border-radius: 12px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.6654 9.21826H7.66536M9.33203 12.5516H7.66536M14.332 5.88493H7.66536M17.6654 5.71826V14.3849C17.6654 15.7851 17.6654 16.4851 17.3929 17.0199C17.1532 17.4903 16.7707 17.8728 16.3003 18.1124C15.7656 18.3849 15.0655 18.3849 13.6654 18.3849H8.33203C6.9319 18.3849 6.23183 18.3849 5.69705 18.1124C5.22665 17.8728 4.8442 17.4903 4.60451 17.0199C4.33203 16.4851 4.33203 15.7851 4.33203 14.3849V5.71826C4.33203 4.31813 4.33203 3.61806 4.60451 3.08329C4.8442 2.61288 5.22665 2.23043 5.69705 1.99075C6.23183 1.71826 6.9319 1.71826 8.33203 1.71826H13.6654C15.0655 1.71826 15.7656 1.71826 16.3003 1.99075C16.7707 2.23043 17.1532 2.61288 17.3929 3.08329C17.6654 3.61806 17.6654 4.31813 17.6654 5.71826Z' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' stroke='%23183B61'/%3e%3c/svg%3e ");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+  }
+
+  @include hover {
+    text-decoration-color: transparent;
+  }
+}

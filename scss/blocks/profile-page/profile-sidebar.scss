@@ -1,0 +1,65 @@
+.profile-sidebar {
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  &__link {
+    width: 100%;
+    min-height: 40px;
+    padding: 9px 12px 9px 12px;
+    border-radius: 12px;
+    display: flex;
+    text-align: left;
+    gap: 12px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+    }
+
+    &.active {
+      background-color: $colorBlueLight;
+      color: #183b61;
+    }
+
+    @include hover {
+      background-color: #edf5fb;
+    }
+  }
+
+  @include responsive1023 {
+    &__nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    &__link {
+      width: auto;
+      border: solid 1px $colorLightGray;
+
+      &.active {
+        border-color: $colorBlueLight;
+      }
+    }
+  }
+
+  @include responsive767 {
+    &__nav {
+    }
+
+    &__link {
+    }
+  }
+
+  @include responsive389 {
+    &__link {
+      font-size: 14px;
+      gap: 8px;
+      padding: 9px 12px;
+    }
+  }
+}

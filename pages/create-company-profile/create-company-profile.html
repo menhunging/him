@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+
+    <title>Создание профиля компании</title>
+
+    <link rel="icon" type="image/png" href="../../img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Хим платформа" />
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/stylesheet.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="index-page">
+
+    <div class="site-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+
+                    <button class="header__burger"></button>
+
+                    <a class="header__logo" href="/">
+                        <img src="../../img/svg/logo.svg" alt="ХимПлатформа">
+                    </a>
+
+                    <nav class="header__nav">
+                        <a href="#">Главная</a>
+                        <a href="#">Кадры</a>
+                        <a href="#">Профориентация</a>
+                        <a href="#">Выпускник РХТУ</a>
+                        <a href="#">Рынок</a>
+                        <a href="#" class="proffessions">Сетевые программы</a>
+                        <a href="#">О нас</a>
+                    </nav>
+
+                    <div class="header__actions">
+                        <a class="header__profile btn btn--blueDark" href="#">Войти</a>
+                        <!-- это после авторизации будет кнопка -->
+                        <!-- <a class="header__lk btn btn--blueDark" href="#"></a> -->
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li>
+                            <a href="#">Главная</a>
+                        </li>
+                        <li>
+                            <span>Создание профиля компании</span>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="breadcrumbs__mobile">Главная</a>
+                </div>
+            </div>
+
+            <div class="profile-page">
+                <div class="container">
+                    <h1 class="profile-page__title caption caption--h2">Создание профиля компании</h1>
+
+                    <section class="create-profile create-profile--company">
+                        <form class="create-profile__form" action="#" method="post">
+                            <div class="create-profile__content">
+                                <h2 class="create-profile__subtitle caption caption--h3">Основные данные</h2>
+
+                                <div class="create-profile__fields">
+                                    <label class="form-item">
+                                        <span>Название компании *</span>
+                                        <input type="text" name="company-name" value="АО “ХимПром”" required>
+                                    </label>
+
+                                    <label class="form-item">
+                                        <span>Сайт компании *</span>
+                                        <input type="url" name="company-site" value="https://www.chimprom.ru" required>
+                                    </label>
+
+                                    <label class="form-item">
+                                        <span>ИНН *</span>
+                                        <input type="text" name="inn" value="4401234567" inputmode="numeric" required>
+                                    </label>
+
+                                    <label class="form-item">
+                                        <span>Контактное лицо *</span>
+                                        <input type="text" name="contact-person"
+                                            value="Иванов Сергей Петрович, HR-директор" required>
+                                    </label>
+                                </div>
+
+                                <label class="form-item form-item--textarea create-company-profile__about">
+                                    <span>О компании</span>
+                                    <textarea
+                                        name="about">Крупнейший производитель химической продукции в России. Мы создаем инновационные решения для устойчивого роста химической промышленности.</textarea>
+                                </label>
+
+                                <div class="create-company-profile__questionnaire">
+                                    <span class="create-company-profile__title">Файл-анкета</span>
+                                    <p>Для заполнения профиля необходимо скачать шаблон анкеты компании, заполнить
+                                        его, после чего ниже прикрепить заполненный шаблон.
+
+                                        <a class="create-company-profile__download" href="#" download>
+                                            <span class="create-company-profile__file-icon">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path
+                                                        d="M12.7 9.2h-5M9.3 12.5H7.7M14.3 5.9H7.7M17.7 5.7v8.7c0 1.4 0 2.1-.3 2.6-.2.5-.6.9-1.1 1.1-.5.3-1.2.3-2.6.3H8.3c-1.4 0-2.1 0-2.6-.3-.5-.2-.9-.6-1.1-1.1-.3-.5-.3-1.2-.3-2.6V5.7c0-1.4 0-2.1.3-2.6.2-.5.6-.9 1.1-1.1.5-.3 1.2-.3 2.6-.3h5.4c1.4 0 2.1 0 2.6.3.5.2.9.6 1.1 1.1.3.5.3 1.2.3 2.6Z"
+                                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span>
+                                                <strong>Скачать шаблон</strong>
+                                                <small>2,4 Мб</small>
+                                            </span>
+                                            <span class="create-company-profile__download-icon"></span>
+                                        </a>
+
+                                        <label class="create-company-profile__attach">
+                                            <input type="file" name="questionnaire" accept=".doc,.docx,.pdf">
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.75 7.41978L7.72925 14.5362C6.13265 16.1546 3.54405 16.1546 1.94745 14.5362C0.35085 12.9179 0.350851 10.294 1.94745 8.67563L8.9682 1.55918C10.0326 0.480273 11.7583 0.480273 12.8227 1.55918C13.8871 2.63809 13.8871 4.38734 12.8227 5.46625L6.0773 12.3036C5.5451 12.8431 4.68224 12.8431 4.15004 12.3036C3.61784 11.7642 3.61784 10.8895 4.15004 10.3501L10.0695 4.34994"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke="#183B61" />
+                                            </svg>
+                                            Отправить заполненный шаблон
+                                        </label>
+                                </div>
+
+                                <button class="create-profile__submit btn btn--blueDark" type="submit">
+                                    Отправить
+                                </button>
+
+                                <div class="profile-instruction">
+                                    <h3 class="caption caption--h3">Инструкция по заполнению профиля</h3>
+                                    <a href="#" class="btn-file">Читать инструкцию</a>
+                                </div>
+                            </div>
+
+                            <label class="create-profile__upload">
+                                <strong class="caption caption--h3">Загрузите логотип компании</strong>
+                                <input type="file" name="logo" accept=".jpg,.jpeg,.png">
+                                <span class="create-profile__dropzone">
+                                    <svg width="199" height="161" viewBox="0 0 199 161" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 35.8331V134.624C0 143.411 7.11872 150.529 15.905 150.529H77.0328C86.2981 156.584 97.3541 160.136 109.25 160.136C121.147 160.136 132.197 156.584 141.467 150.529H183.098C191.881 150.529 199 143.411 199 134.624V35.8331H0ZM175.855 40.0641C178.648 40.0641 180.911 42.3285 180.911 45.1209C180.911 47.9147 178.648 50.1778 175.855 50.1778C173.062 50.1778 170.798 47.916 170.798 45.1209C170.798 42.3285 173.062 40.0641 175.855 40.0641ZM36.0714 52.9583C36.0714 57.6022 36.0714 133.719 36.0714 133.719H25.8347C25.8347 133.719 25.8347 56.6546 25.8347 50.3022C25.8347 43.9524 38.6309 39.3084 41.0011 41.4881C43.3701 43.6665 36.0714 48.3091 36.0714 52.9583ZM108.869 145.471C80.3917 145.471 57.3005 122.385 57.3005 93.9065C57.3005 65.429 80.3917 42.3365 108.869 42.3365C137.349 42.3365 160.437 65.4276 160.437 93.9065C160.438 122.385 137.349 145.471 108.869 145.471ZM188.496 131.823H166.25V119.565H188.496V131.823Z"
+                                            fill="#9D9D9D" />
+                                        <path
+                                            d="M183.098 19.7164C183.098 19.7164 182.742 19.7164 182.175 19.7164V6.69788H149.065V19.6251C141.012 18.6709 134.528 0 134.528 0H82.5812C82.5812 0 75.3791 19.7164 67.4134 19.7164C67.3777 19.7164 67.3301 19.7164 67.2904 19.7164V7.45752H34.1755V19.7164C24.181 19.7164 15.9056 19.7164 15.9056 19.7164C8.08942 19.7164 1.62182 25.3662 0.285156 32.7985H198.716C197.382 25.3662 190.913 19.7164 183.098 19.7164ZM129.85 22.1198H90.4173V7.20475H129.85V22.1198Z"
+                                            fill="#9D9D9D" />
+                                        <path
+                                            d="M109.067 67.0831C94.0448 67.0831 81.8242 79.3037 81.8242 94.3246C81.8242 109.347 94.0448 121.567 109.067 121.567C124.089 121.567 136.308 109.347 136.308 94.3246C136.31 79.3037 124.089 67.0831 109.067 67.0831Z"
+                                            fill="#9D9D9D" />
+                                        <path
+                                            d="M108.868 57.1271C88.5546 57.1271 72.0898 73.5905 72.0898 93.9052C72.0898 114.218 88.5546 130.683 108.868 130.683C129.185 130.683 145.649 114.217 145.649 93.9052C145.65 73.5905 129.185 57.1271 108.868 57.1271ZM109.068 124.034C92.6864 124.034 79.3581 110.706 79.3581 94.3247C79.3581 77.9433 92.6864 64.615 109.068 64.615C125.449 64.615 138.777 77.942 138.777 94.3247C138.777 110.707 125.45 124.034 109.068 124.034Z"
+                                            fill="#9D9D9D" />
+                                    </svg>
+                                    <span>Нет фотографии</span>
+                                </span>
+                                <small>JPG, PNG до 5 Мб</small>
+                            </label>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__about">
+                        <a class="footer__logo" href="/">
+                            <img src="../../img/svg/logo-white.svg" alt="ХимПлатформа">
+                        </a>
+                    </div>
+
+                    <div class="footer__nav">
+                        <a href="#">О нас</a>
+                        <a href="#">Кадры</a>
+                        <a href="#">Профориентация</a>
+                        <a href="#">Рынок ХТК</a>
+                        <a href="#">Образовательные программы</a>
+                        <a href="#">Справочник профессий</a>
+                    </div>
+
+                    <div class="footer__contacts">
+                        <strong>Контакты</strong>
+                        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                        <strong>Почта:</strong>
+                        <a href="mailto:info@m-platforma.ru">info@m-platforma.ru</a>
+                    </div>
+
+                    <div class="footer__schedule">
+                        <strong>Режим работы</strong>
+                        <span>Пн - Пт: 09:00-18:00</span>
+                        <span>Сб - Вс: выходной</span>
+                        <a class="footer__button btn btn--white" href="#">Связаться с нами</a>
+                    </div>
+
+                    <p class="footer__copyright"><span class="thisYear">2026</span> Платформа для развития кадрового
+                        потенциала химической отрасли России</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="overlay"></div>
+
+</body>
+
+<script src="../../libs/jquery/jquery-4.0.0.min.js"></script>
+<script src="../../libs/swiper/swiper-bundle.min.js"></script>
+<script src="../../libs/select2/select2.min.js"></script>
+<script src="../../libs/micromodal/micromodal.min.js"></script>
+<script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
+<script src="../../libs/fancybox/fancybox.umd.js"></script>
+<script src="../../libs/aos/aos.js"></script>
+<script src="../../js/main.js"></script>
+
+</html>

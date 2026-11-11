@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, viewport-fit=cover" />
+    <title>Модальные окна</title>
+
+    <link rel="icon" type="image/png" href="../../img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../../img/favicon/site.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="Зона комфорта" />
+
+    <link rel="stylesheet" type="text/css" href="../../fonts/stylesheet.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/select2/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/micromodal/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/fancybox/fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/aos/aos.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+</head>
+
+<body class="index-page">
+
+    <div class="site-wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+
+                    <button class="header__burger"></button>
+
+                    <a class="header__logo" href="/">
+                        <img src="../../img/svg/logo.svg" alt="ХимПлатформа">
+                    </a>
+
+                    <nav class="header__nav">
+                        <a href="#">Главная</a>
+                        <a href="#">Кадры</a>
+                        <a href="#">Профориентация</a>
+                        <a href="#">Выпускник РХТУ</a>
+                        <a href="#">Рынок</a>
+                        <a href="#" class="proffessions">Сетевые программы</a>
+                        <a href="#">О нас</a>
+                    </nav>
+
+                    <div class="header__actions">
+                        <a class="header__profile btn btn--blueDark" href="#" data-modal="popup-login">Войти</a>
+                        <!-- это после авторизации будет кнопка -->
+                        <!-- <a class="header__lk btn btn--blueDark" href="#"></a> -->
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="container">
+                <br />
+                <br />
+
+                <a href="#" data-modal="popup-login">Вход</a>
+
+                <br />
+                <br />
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__about">
+                        <a class="footer__logo" href="/">
+                            <img src="../../img/svg/logo-white.svg" alt="ХимПлатформа">
+                        </a>
+                    </div>
+
+                    <div class="footer__nav">
+                        <a href="#">О нас</a>
+                        <a href="#">Кадры</a>
+                        <a href="#">Профориентация</a>
+                        <a href="#">Рынок ХТК</a>
+                        <a href="#">Образовательные программы</a>
+                        <a href="#">Справочник профессий</a>
+                    </div>
+
+                    <div class="footer__contacts">
+                        <strong>Контакты</strong>
+                        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                        <strong>Почта:</strong>
+                        <a href="mailto:info@m-platforma.ru">info@m-platforma.ru</a>
+                    </div>
+
+                    <div class="footer__schedule">
+                        <strong>Режим работы</strong>
+                        <span>Пн - Пт: 09:00-18:00</span>
+                        <span>Сб - Вс: выходной</span>
+                        <a class="footer__button btn btn--white" href="#">Связаться с нами</a>
+                    </div>
+
+                    <p class="footer__copyright"><span class="thisYear">2026</span> Платформа для развития кадрового
+                        потенциала химической отрасли России</p>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="overlay"></div>
+
+</body>
+
+<div class="micromodal-slide modal" id="popup-login" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="popup-login-title">
+        <div class="modal__close" tabindex="-1" data-micromodal-close></div>
+        <div class="modal__inner">
+            <div class="modal__content">
+                <div class="popup-login">
+                    <h2 class="popup-login__title caption caption--h2" id="popup-login-title">Вход</h2>
+
+                    <div class="popup-login__roles">
+                        <button class="popup-login__role active" type="button" data-role="employer">Войти как
+                            работодатель</button>
+                        <button class="popup-login__role" type="button" data-role="student">Войти как студент</button>
+                    </div>
+
+                    <form class="popup-login__form" action="#" method="post">
+                        <input type="hidden" name="role" value="employer">
+
+                        <label class="form-item">
+                            <span>Логин</span>
+                            <input type="text" name="login" placeholder="Введите логин" autocomplete="username">
+                        </label>
+
+                        <label class="form-item">
+                            <span>Пароль</span>
+                            <input type="password" name="password" placeholder="Введите пароль"
+                                autocomplete="current-password">
+                        </label>
+
+                        <label class="popup-login__remember">
+                            <input type="checkbox" name="remember">
+                            <span>Запомнить на этом устройстве</span>
+                        </label>
+
+                        <button class="popup-login__submit btn btn--blueDark" type="submit">Войти</button>
+                    </form>
+
+                    <div class="popup-login__links">
+                        <div class="popup-login__links-item">
+                            <span>Забыли логин, пароль?</span>
+                            <a href="#">Восстановить</a>
+                        </div>
+                        <div class="popup-login__links-item">
+                            <span>Еще не зарегистрированы?</span>
+                            <a href="#">Заявка на регистрацию</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../libs/jquery/jquery-4.0.0.min.js"></script>
+<script src="../../libs/swiper/swiper-bundle.min.js"></script>
+<script src="../../libs/select2/select2.min.js"></script>
+<script src="../../libs/micromodal/micromodal.min.js"></script>
+<script src="../../libs/tabslet/jquery.tabslet.min.js"></script>
+<script src="../../libs/fancybox/fancybox.umd.js"></script>
+<script src="../../libs/inputmask/jquery.inputmask.min.js"></script>
+<script src="../../libs/aos/aos.js"></script>
+<script src="../../js/main.js"></script>
+
+</html>
